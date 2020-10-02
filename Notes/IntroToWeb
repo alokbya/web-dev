@@ -1,0 +1,24 @@
+Objectives
+- Understand how the internet works (high level)
+- Understand diff b/t front-end and back-end
+- View HTML on any given website
+
+Finding the Right Address
+    www.udemy.com -> 23.235.47.175
+- Your query is submitted to your ISP
+- Within your ISP, the DNS takes the Domain name and turns int into an IP Address
+
+Going to That Address
+- A request is sent to the desired IP address via HTTP
+- Your request finds the fastest path possible to the server with the specified IP
+- This is not a direct journey. It requires hopping from server to server until it's reached it's destination
+
+Server Responsds
+- The requested server figures out exactly what we're asking for (/courses)
+- The server builds us the right content, often pulling the information from database
+- The server responds with any combination of HTML, CSS, and JavaScript
+
+View Page Source
+- We can view the underlying HTML, CSS, and JavaScript on any webpage
+- In Chrome, right click and select "View Page Source"
+- Or select View > Developer > View Source

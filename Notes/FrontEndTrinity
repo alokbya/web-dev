@@ -1,0 +1,34 @@
+Objectives
+- Front End vs. Back End
+- Understand roles of HTML, CSS, JavaScript
+
+Front End vs. Back End
+----------------------
+1. Front End is stuff you see and interact with: HTML, CSS, JavaScript
+2. Back End is everything else
+3. Restaurant Analogy: The backend is everything that happens in the kitchen; the front end is what is plated and sent to your table
+
+HTML
+----
+- HyperText Markup Language
+- Defines the structure of a webpag
+    - "put an image here"
+    - "put a form here"
+- The "nouns" of a webpage
+
+CSS
+---
+- Cascading Style Sheets
+- Defines the style of HTML
+    - "make all the text purple"
+    - "gives teh first image a yellow border"
+- The "adjectives" of a webpage
+
+JavaScript
+----------
+- Adds logic and interactivity to a page
+    - "Do some math"
+    - "Change color when the user clicks"
+    - "Load new data from twitter"
+- "Verbs" of a page
+
