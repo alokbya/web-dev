@@ -22,3 +22,76 @@ View Page Source
 - We can view the underlying HTML, CSS, and JavaScript on any webpage
 - In Chrome, right click and select "View Page Source"
 - Or select View > Developer > View Source
+
+HTTP Requests
+    - Foundation of communication on the World Wide webpage
+    - "Hyper Text Transfer Protocol"
+    - Request -> I would like this information please
+    - Response -> Ok, here you go!
+
+Web Server
+    - A computer* that can satisfy requests on the web
+        * "server" is also used to refer to the software running on the computer
+    - Responds to client with "instructions"
+        - Browser then uses instructions to build web page
+Client
+    - A computer that accesses a server
+
+HTML5
+    Living Standard
+        The HTML standard is a document that describes how HTML should work.
+    Role of Browsers
+        The standard describes the rules of HTML, but browsers actually have to do
+        the work and implement HTML according to those rules. 
+    HTML5? 
+        HTML5 is the latest evolution of the standard that defines HTML. It includes
+        new elements & features for browsers to implement
+
+Inline vs. block elements
+    - Inline elements fit in alongside other elements
+    - Block level elements take up a whole "block" of space
+
+<div>
+    - The content division element
+    - A generic container to hold things, or group them together
+    - A block element
+
+<span>
+    - Generic inline element
+    - Very similar to a <div>, but inline
+
+<hr>
+    - Horizontal rule element
+    - No closing tag, no content, no attribute
+    - Makes a dividing line 
+    - "A thematic break between elements
+
+<br>
+    - Line break element
+    
+<sup>
+    - Superscript element
+    - Needs closing tag
+
+<sub> 
+    - Subscript element
+    - Needs closing tag
+
+<main> 
+    - Essentially a <div> but semantically correct for "main" content of page
+
+<header>
+    - Essentially a <div> but semantically correct for "header" portion of page
+
+HTML Entities
+    - Special codes/sequences that result in different characters
+    - e.g. copyright, diamonds, etc.
+    - Start with "&"
+    - End with ";"
+    - e.g. &lt; => "<"
+    - Each entity has a name and number
+
+Semantic Markup
+    Semantic - relating to meaning
+    - Add meaning to Markup
+    - Using elements like <main>, <header>, <footer>, etc...
