@@ -95,3 +95,189 @@ Semantic Markup
     Semantic - relating to meaning
     - Add meaning to Markup
     - Using elements like <main>, <header>, <footer>, etc...
+
+HTML Tables
+    - Tables are structured sets of data, made up of rows and columns. 
+      They can be a great way of displaying data clearly.
+    - In the early days of web, tables were commonly used to create page layouts.
+      Today, you should only use the table element when you are creating an actually
+      data table.
+    - To create a table, you'll use 5-10 different elements. It can be tricky
+      to remember them all.
+
+    <table> : holds tabular data
+    <td>    : table data (a single cell)
+    <tr>    : table row 
+    <th>    : column header
+    <thead> : wrap headers in this tag for semantics
+    <tfoot> : wrap footer in this tag for semantics
+    <tbody> : wrap body rows in this tag for semantics.
+
+Creating Forms
+    - The <form> element itself is a shell or container that deosn't have any visual impact.
+    - We then fill the form with a collection of inputs, checkboxes, buttons, etc.
+    - The form element represents a document selection containing interactive controls
+      for submitting information.
+    - The action attribute specifies WHERE the form data should be sent
+    - The method attribute specifies which HTTP method should be used
+
+<input>
+    - The input (Form input) element
+    - use placeholder="" to clarify input type to user
+    - tons of different input types
+    - Can have <input type="submit"> to replicate button. Don't do this.
+    - radio buttons are linked by their NAME
+        - need value="" to send data with radio buttons
+<label>
+    - Should be linked to an input 
+    - makes input more accessible 
+    - <input> needs id="cheese"...
+    - <label for="cheese"...
+
+<button>
+    - Default action is to do form action
+    - Button has a type that can be used to change button action
+    - button with type=button won't submit, even when in a form 
+
+name attribute
+    - name that is used to send data to server
+    - i.e. <label name=id>...</label>
+        yields ......com/tacos?id=what-the-user-input
+    - needs to be used in every single label
+    - used by server for data processing
+
+<select>
+    - used to group <options> in a dropdown list
+
+<textarea>
+    - used for multiline input
+
+Form Validations
+    - required attribute makes input required
+
+CSS
+---
+    - What is it?   
+        - CSS is a language for describing how documents are presented visually,
+          how they are arranged, and how they are styled
+        - CSS stands for Cascading Style Sheets
+        
+CSS Selectors
+-------------
+
+universal selector:
+* {  
+    color: pink;
+}
+
+element selector:
+button {
+    color: red;
+}
+
+selector list:
+h1, h2 {
+    color: blue;
+}
+
+id selector:
+#some-unique-id{
+    color: yellow;
+}
+
+class selector:
+.some-class-name {
+    color: magenta;
+}
+
+descendant selector:
+// can be a removed descendant by several levels of tags... 
+li a {  // will only style anchor tags, IF THEY ARE NESTED INSIDE <li>
+    color: teal;
+}
+
+.class-name a { // anchor tags nested inside class "post"
+    color: black;
+}
+
+adjacent selector:
+a + b {
+    // selects all b's directly after a's
+}
+
+direct-descendant selector(combinator):
+// selects all li that are DIRECT CHILDREN of <div>
+div > li {
+    color: white;
+}
+
+attribute selector:
+// select all input elements where the type attribute is set to "text"
+input[type="text"] {
+    width: 300px;
+    color: yellow;
+}
+
+pseudo classes:
+// keyword added to a selector that specifies a special state of the 
+// selected element(s)
+    - : active
+    - : checked
+    - : first
+    - : first-child
+    - : hover
+    - : not()
+    - : nth-child()
+    - : nth-of-type()
+
+.post button:hover {
+    // when hovering over a button that is in tag with 'post' class
+}
+.post:nth-of-type(3n){
+    // selects every third "post" for all post siblings
+    color: blue;
+}
+.post:nth-of-type(3){
+    // selects third "post" for all post siblings
+    color: blue;
+}
+
+pseudo elements:
+// keywords added to a selector that lets you style a particular part of
+// selected elements(s)
+    - ::after
+    - ::before
+    - ::first-letter
+    - ::first-line
+    - :: selection
+
+    p::first-letter {
+        // selects first letter of every paragraph
+        color: black;
+    }
+    p::selection {
+        // when selecting text in a paragraph...
+        background-color: yellow;
+    }
+
+css cascade:
+// the order your styles are declared in and linked to matters!
+// reads top-down!
+// this also stands for the html file where the <link> is....
+// the first <link> to a css file can be overwritten by content
+// in the second <link>
+
+specificity:
+// specificity is how the browser decides which rules apply when multiple rules
+// could apply to the same element. 
+// it is a measure of how specific a given selector is. The more specific
+// selector wins.
+
+    specificity guide
+    id > class > element
+
+css inheritance:
+// can set property to inherit, 
+button {
+    color: inherit;
+}

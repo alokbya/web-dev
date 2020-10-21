@@ -1,27 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <!-- page title -->
-    <title>Form Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
-    <h1>Login</h1>
-
-    <!-- action -- where the form sends data to -->
-    <!-- method - what HTTP method (get/post) -->
-
-    <form>
-        <label for="username">Username: </label>
-        <input id="username" name="username" type="text" placeholder="username">
-        <label for="password"> Password: </label>
-        <input id="password" name="password" type="password" placeholder="password">
-
-        <input type="submit">
+    <h1>Forms</h1>
+    <form action="/tacos">
+        <p>
+            <label for="username-input">Enter Username: </label>
+            <input type="text" placeholder="username" id="username-input">
+        </p>
+        <p>
+            <label for="pwd">Enter Password: </label>
+            <input type="password" placeholder="password" id="pwd">
+        </p>
+        <p>
+            <label for="cheese">Amount of Cheese </label>
+            <input type="range" id="cheese" min=1 max=1000>
+        </p>
+        <p>
+            <label for="num">Enter a number: </label>
+            <input type="number" placeholder="enter a number" id="num">
+        </p>
+        <button>Submit</button>
     </form>
+    <h2>Hijacking Search</h2>
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search">
+        <label for="search-r">Search reddit: </label>
+        <input type="text" name="q" placeholder="reddit search" id="search-r">
+        <button>Submit</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <label for="search-g">Search google: </label>
+        <input type="text" name="q" placeholder="google search" id="search-g">
+        <button>Submit</button>
+    </form>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <label for="search-y">Search google: </label>
+        <input type="text" name="search_query" placeholder="youtube search" id="search-y">
+        <button>Submit</button>
+    </form>
+    <h2>More Inputs</h2>
+    <form action="/birds">
+        <input type="checkbox" name="agree_tos" id="agree" checked>
+        <label for="agree">I agree to these terms</label>
+        <p>
+            <label for="xs">XS: </label>
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S: </label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M: </label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <p>
+            <label for="meal">Please select a meal type</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="steak">Steak</option>
+                <option value="veg" selected>Vegetarian</option>
 
+            </select>
+            <label for="cheese">Amount of Cheese </label>
+            <input type="range" name=cheese" id="cheese" min=1 step="400" value="250" max=1000>
+        </p>
+        <p>
+        <h4>Special Requests</h4>
+        <label for="requests">Any Requests?</label>
+        <br>
+        <textarea name="Requests?" id="requests" cols="30" rows="10" placeholder="Enter text here..."></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
 </body>
 
 </html>

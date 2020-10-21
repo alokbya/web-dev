@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiefield Half-Marathon</title>
+</head>
+
+<body>
+    <form action="/run">
+        <h1>Race Registration</h1>
+        <div id="runner-names">
+            <label for="fname">First Name </label>
+            <input type="text" name="fname" id="fname" placeholder="first name" required>
+            <label for="lname">Last Name </label>
+            <input type="text" name="lname" id="lname" placeholder="last name" required>
+        </div>
+        <br>
+        <div id="race-select">
+            <input type="radio" name="race-select" id="fun-run" required>
+            <label for="fun-run">Fun Run 5k</label>
+            <br>
+            <input type="radio" name="race-select" id="tenk" required>
+            <label for="tenk">10k</label>
+            <br>
+            <input type="radio" name="race-select" id="half" required>
+            <label for="half">Half-Marathon</label>
+        </div>
+        <br>
+        <div id="create-acct">
+            <label for="email">Email </label>
+            <input type="email" name="email" id="email" placeholder="email" required>
+            <label for="pwd">Password </label>
+            <input type="password" name="pwd" id="pwd" placeholder="password" required>
+        </div>
+        <br>
+        <div id="age-group">
+            <label for="age">Select Age Group</label>
+            <select name="age" id="age" required>
+                <option value="age-group1">Under 18</option>
+                <option value="age-group2">18 - 29</option>
+                <option value="age-group3">30 - 49</option>
+                <option value="age-group4">50+</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>
