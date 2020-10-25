@@ -281,3 +281,90 @@ css inheritance:
 button {
     color: inherit;
 }
+
+border properties (css box model):
+    - border-width: changes thickness of border, generally in pixels
+    - border-color: color
+    - border-style: e.g. solid, dashed, dotted
+    - box-sizing: border-box will just fill the border box (parent)
+    - border-radius: 50% (circle)
+
+    - border: |width| |style| |color|
+
+padding (css box model):
+    - padding is the space between the content (in the content box), and the border
+    - padding shorthand:
+        - padding: 10px;            // all four sides
+        - padding: 5px 10px;        // vertical | horizontal
+        - padding: 1px 2px 2px;     // top | horizontal | bottom
+        - padding: 5px 1px 0 2px;   // top | right | bottom| left
+
+margin (css box model):
+    - margin on the outisde of a border
+    - margin shorthand is the same as padding
+    - add margin: 0 to body at first in order to remove "mystery" space
+
+display (css box model):
+    - Inline
+        - Width & height are ignored. Margin & padding push elements away
+          horizontally, but not vertically.
+    - Block 
+        - Block elements break the flow of a document. Width, height, margin
+          & padding are respected.
+    - Inline-Block
+        - Behaved like an inline element except Width, height, margin &
+          padding are respected.
+    - e.g.
+        - display: block;           // set element to act (display) like a block element
+        - display: inline;          // set element to act (display) like inline element
+            - width and height are ignored for inline elements
+            - padding and margin are kind of respected, but not really
+                - they behave as thought they are in a different plane than surrounding elements
+        - display: inline-block;    // behaves like an inline element, except width, height, margin and padding are respected
+        - display: none;            // element still exists but takes up no space (invisible)
+
+Relative Units
+--------------
+    - Percentages
+      Percentages are always relative to some other value. Sometimes it's a value
+      from the parent, and other times it's a value from the element itself.
+        - width: 50%;       // half the width of the parent
+        - line-height: 50%; // half the font size of the element itself
+    - Ems
+      Em's are relative units. With font-size, 1em equals the font-size of the parent.
+      2em's is twice the font-size of the parent, etc. With other properties, 1em is equal
+      to the computed font-size of the element itself.
+        - font-size: 5em;       // 5x the size of the parents font-size
+        - margin-left: 1.5em;   // 1.5x this elements font-size (5em => 7.5x the parent's font-size)
+
+    - Rems
+      Root ems. Relative to the root html element's font-size. Oftern easier to work with.
+      If the root font-size is 20px, 1rem is always 20px, 2rem is always 40px, etc.
+      #test-id h2 {
+          font-size: 3rem;  // h2s with id of "test-id" will have a font size of 3x root element font-size
+
+      }
+
+rgba
+----
+    - alpha (opacity) only affects background colors, not text color
+    - use css property opacity, instead, to make the entire element transparent
+
+position
+--------
+    - static
+    - relative
+    - absolute
+    - fixed     // this is useful for header, footer
+    - sticky    // also good for header footer
+
+transition
+----------
+    - transition the element to another property state?
+    - syntax:
+        transition: property-name duration timing-function delay;
+    - single out the properties you want to transition, don't use "all"
+
+transform
+---------
+    
