@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Objectives
 - Understand how the internet works (high level)
 - Understand diff b/t front-end and back-end
@@ -281,3 +282,375 @@ css inheritance:
 button {
     color: inherit;
 }
+=======
+Objectives
+- Understand how the internet works (high level)
+- Understand diff b/t front-end and back-end
+- View HTML on any given website
+
+Finding the Right Address
+    www.udemy.com -> 23.235.47.175
+- Your query is submitted to your ISP
+- Within your ISP, the DNS takes the Domain name and turns int into an IP Address
+
+Going to That Address
+- A request is sent to the desired IP address via HTTP
+- Your request finds the fastest path possible to the server with the specified IP
+- This is not a direct journey. It requires hopping from server to server until it's reached it's destination
+
+Server Responsds
+- The requested server figures out exactly what we're asking for (/courses)
+- The server builds us the right content, often pulling the information from database
+- The server responds with any combination of HTML, CSS, and JavaScript
+
+View Page Source
+- We can view the underlying HTML, CSS, and JavaScript on any webpage
+- In Chrome, right click and select "View Page Source"
+- Or select View > Developer > View Source
+
+HTTP Requests
+    - Foundation of communication on the World Wide webpage
+    - "Hyper Text Transfer Protocol"
+    - Request -> I would like this information please
+    - Response -> Ok, here you go!
+
+Web Server
+    - A computer* that can satisfy requests on the web
+        * "server" is also used to refer to the software running on the computer
+    - Responds to client with "instructions"
+        - Browser then uses instructions to build web page
+Client
+    - A computer that accesses a server
+
+HTML5
+    Living Standard
+        The HTML standard is a document that describes how HTML should work.
+    Role of Browsers
+        The standard describes the rules of HTML, but browsers actually have to do
+        the work and implement HTML according to those rules. 
+    HTML5? 
+        HTML5 is the latest evolution of the standard that defines HTML. It includes
+        new elements & features for browsers to implement
+
+Inline vs. block elements
+    - Inline elements fit in alongside other elements
+    - Block level elements take up a whole "block" of space
+
+<div>
+    - The content division element
+    - A generic container to hold things, or group them together
+    - A block element
+
+<span>
+    - Generic inline element
+    - Very similar to a <div>, but inline
+
+<hr>
+    - Horizontal rule element
+    - No closing tag, no content, no attribute
+    - Makes a dividing line 
+    - "A thematic break between elements
+
+<br>
+    - Line break element
+    
+<sup>
+    - Superscript element
+    - Needs closing tag
+
+<sub> 
+    - Subscript element
+    - Needs closing tag
+
+<main> 
+    - Essentially a <div> but semantically correct for "main" content of page
+
+<header>
+    - Essentially a <div> but semantically correct for "header" portion of page
+
+HTML Entities
+    - Special codes/sequences that result in different characters
+    - e.g. copyright, diamonds, etc.
+    - Start with "&"
+    - End with ";"
+    - e.g. &lt; => "<"
+    - Each entity has a name and number
+
+Semantic Markup
+    Semantic - relating to meaning
+    - Add meaning to Markup
+    - Using elements like <main>, <header>, <footer>, etc...
+
+HTML Tables
+    - Tables are structured sets of data, made up of rows and columns. 
+      They can be a great way of displaying data clearly.
+    - In the early days of web, tables were commonly used to create page layouts.
+      Today, you should only use the table element when you are creating an actually
+      data table.
+    - To create a table, you'll use 5-10 different elements. It can be tricky
+      to remember them all.
+
+    <table> : holds tabular data
+    <td>    : table data (a single cell)
+    <tr>    : table row 
+    <th>    : column header
+    <thead> : wrap headers in this tag for semantics
+    <tfoot> : wrap footer in this tag for semantics
+    <tbody> : wrap body rows in this tag for semantics.
+
+Creating Forms
+    - The <form> element itself is a shell or container that deosn't have any visual impact.
+    - We then fill the form with a collection of inputs, checkboxes, buttons, etc.
+    - The form element represents a document selection containing interactive controls
+      for submitting information.
+    - The action attribute specifies WHERE the form data should be sent
+    - The method attribute specifies which HTTP method should be used
+
+<input>
+    - The input (Form input) element
+    - use placeholder="" to clarify input type to user
+    - tons of different input types
+    - Can have <input type="submit"> to replicate button. Don't do this.
+    - radio buttons are linked by their NAME
+        - need value="" to send data with radio buttons
+<label>
+    - Should be linked to an input 
+    - makes input more accessible 
+    - <input> needs id="cheese"...
+    - <label for="cheese"...
+
+<button>
+    - Default action is to do form action
+    - Button has a type that can be used to change button action
+    - button with type=button won't submit, even when in a form 
+
+name attribute
+    - name that is used to send data to server
+    - i.e. <label name=id>...</label>
+        yields ......com/tacos?id=what-the-user-input
+    - needs to be used in every single label
+    - used by server for data processing
+
+<select>
+    - used to group <options> in a dropdown list
+
+<textarea>
+    - used for multiline input
+
+Form Validations
+    - required attribute makes input required
+
+CSS
+---
+    - What is it?   
+        - CSS is a language for describing how documents are presented visually,
+          how they are arranged, and how they are styled
+        - CSS stands for Cascading Style Sheets
+        
+CSS Selectors
+-------------
+
+universal selector:
+* {  
+    color: pink;
+}
+
+element selector:
+button {
+    color: red;
+}
+
+selector list:
+h1, h2 {
+    color: blue;
+}
+
+id selector:
+#some-unique-id{
+    color: yellow;
+}
+
+class selector:
+.some-class-name {
+    color: magenta;
+}
+
+descendant selector:
+// can be a removed descendant by several levels of tags... 
+li a {  // will only style anchor tags, IF THEY ARE NESTED INSIDE <li>
+    color: teal;
+}
+
+.class-name a { // anchor tags nested inside class "post"
+    color: black;
+}
+
+adjacent selector:
+a + b {
+    // selects all b's directly after a's
+}
+
+direct-descendant selector(combinator):
+// selects all li that are DIRECT CHILDREN of <div>
+div > li {
+    color: white;
+}
+
+attribute selector:
+// select all input elements where the type attribute is set to "text"
+input[type="text"] {
+    width: 300px;
+    color: yellow;
+}
+
+pseudo classes:
+// keyword added to a selector that specifies a special state of the 
+// selected element(s)
+    - : active
+    - : checked
+    - : first
+    - : first-child
+    - : hover
+    - : not()
+    - : nth-child()
+    - : nth-of-type()
+
+.post button:hover {
+    // when hovering over a button that is in tag with 'post' class
+}
+.post:nth-of-type(3n){
+    // selects every third "post" for all post siblings
+    color: blue;
+}
+.post:nth-of-type(3){
+    // selects third "post" for all post siblings
+    color: blue;
+}
+
+pseudo elements:
+// keywords added to a selector that lets you style a particular part of
+// selected elements(s)
+    - ::after
+    - ::before
+    - ::first-letter
+    - ::first-line
+    - :: selection
+
+    p::first-letter {
+        // selects first letter of every paragraph
+        color: black;
+    }
+    p::selection {
+        // when selecting text in a paragraph...
+        background-color: yellow;
+    }
+
+css cascade:
+// the order your styles are declared in and linked to matters!
+// reads top-down!
+// this also stands for the html file where the <link> is....
+// the first <link> to a css file can be overwritten by content
+// in the second <link>
+
+specificity:
+// specificity is how the browser decides which rules apply when multiple rules
+// could apply to the same element. 
+// it is a measure of how specific a given selector is. The more specific
+// selector wins.
+
+    specificity guide
+    id > class > element
+
+css inheritance:
+// can set property to inherit, 
+button {
+    color: inherit;
+}
+
+border properties (css box model):
+    - border-width: changes thickness of border, generally in pixels
+    - border-color: color
+    - border-style: e.g. solid, dashed, dotted
+    - box-sizing: border-box will just fill the border box (parent)
+    - border-radius: 50% (circle)
+
+    - border: |width| |style| |color|
+
+padding (css box model):
+    - padding is the space between the content (in the content box), and the border
+    - padding shorthand:
+        - padding: 10px;            // all four sides
+        - padding: 5px 10px;        // vertical | horizontal
+        - padding: 1px 2px 2px;     // top | horizontal | bottom
+        - padding: 5px 1px 0 2px;   // top | right | bottom| left
+
+margin (css box model):
+    - margin on the outisde of a border
+    - margin shorthand is the same as padding
+    - add margin: 0 to body at first in order to remove "mystery" space
+
+display (css box model):
+    - Inline
+        - Width & height are ignored. Margin & padding push elements away
+          horizontally, but not vertically.
+    - Block 
+        - Block elements break the flow of a document. Width, height, margin
+          & padding are respected.
+    - Inline-Block
+        - Behaved like an inline element except Width, height, margin &
+          padding are respected.
+    - e.g.
+        - display: block;           // set element to act (display) like a block element
+        - display: inline;          // set element to act (display) like inline element
+            - width and height are ignored for inline elements
+            - padding and margin are kind of respected, but not really
+                - they behave as thought they are in a different plane than surrounding elements
+        - display: inline-block;    // behaves like an inline element, except width, height, margin and padding are respected
+        - display: none;            // element still exists but takes up no space (invisible)
+
+Relative Units
+--------------
+    - Percentages
+      Percentages are always relative to some other value. Sometimes it's a value
+      from the parent, and other times it's a value from the element itself.
+        - width: 50%;       // half the width of the parent
+        - line-height: 50%; // half the font size of the element itself
+    - Ems
+      Em's are relative units. With font-size, 1em equals the font-size of the parent.
+      2em's is twice the font-size of the parent, etc. With other properties, 1em is equal
+      to the computed font-size of the element itself.
+        - font-size: 5em;       // 5x the size of the parents font-size
+        - margin-left: 1.5em;   // 1.5x this elements font-size (5em => 7.5x the parent's font-size)
+
+    - Rems
+      Root ems. Relative to the root html element's font-size. Oftern easier to work with.
+      If the root font-size is 20px, 1rem is always 20px, 2rem is always 40px, etc.
+      #test-id h2 {
+          font-size: 3rem;  // h2s with id of "test-id" will have a font size of 3x root element font-size
+
+      }
+
+rgba
+----
+    - alpha (opacity) only affects background colors, not text color
+    - use css property opacity, instead, to make the entire element transparent
+
+position
+--------
+    - static
+    - relative
+    - absolute
+    - fixed     // this is useful for header, footer
+    - sticky    // also good for header footer
+
+transition
+----------
+    - transition the element to another property state?
+    - syntax:
+        transition: property-name duration timing-function delay;
+    - single out the properties you want to transition, don't use "all"
+
+transform
+---------
+    
+>>>>>>> 4b1965598e32fbbaa58098d31cf6e64bfaa1dd99
