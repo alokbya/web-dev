@@ -1,288 +1,3 @@
-<<<<<<< HEAD
-Objectives
-- Understand how the internet works (high level)
-- Understand diff b/t front-end and back-end
-- View HTML on any given website
-
-Finding the Right Address
-    www.udemy.com -> 23.235.47.175
-- Your query is submitted to your ISP
-- Within your ISP, the DNS takes the Domain name and turns int into an IP Address
-
-Going to That Address
-- A request is sent to the desired IP address via HTTP
-- Your request finds the fastest path possible to the server with the specified IP
-- This is not a direct journey. It requires hopping from server to server until it's reached it's destination
-
-Server Responsds
-- The requested server figures out exactly what we're asking for (/courses)
-- The server builds us the right content, often pulling the information from database
-- The server responds with any combination of HTML, CSS, and JavaScript
-
-View Page Source
-- We can view the underlying HTML, CSS, and JavaScript on any webpage
-- In Chrome, right click and select "View Page Source"
-- Or select View > Developer > View Source
-
-HTTP Requests
-    - Foundation of communication on the World Wide webpage
-    - "Hyper Text Transfer Protocol"
-    - Request -> I would like this information please
-    - Response -> Ok, here you go!
-
-Web Server
-    - A computer* that can satisfy requests on the web
-        * "server" is also used to refer to the software running on the computer
-    - Responds to client with "instructions"
-        - Browser then uses instructions to build web page
-Client
-    - A computer that accesses a server
-
-HTML5
-    Living Standard
-        The HTML standard is a document that describes how HTML should work.
-    Role of Browsers
-        The standard describes the rules of HTML, but browsers actually have to do
-        the work and implement HTML according to those rules. 
-    HTML5? 
-        HTML5 is the latest evolution of the standard that defines HTML. It includes
-        new elements & features for browsers to implement
-
-Inline vs. block elements
-    - Inline elements fit in alongside other elements
-    - Block level elements take up a whole "block" of space
-
-<div>
-    - The content division element
-    - A generic container to hold things, or group them together
-    - A block element
-
-<span>
-    - Generic inline element
-    - Very similar to a <div>, but inline
-
-<hr>
-    - Horizontal rule element
-    - No closing tag, no content, no attribute
-    - Makes a dividing line 
-    - "A thematic break between elements
-
-<br>
-    - Line break element
-    
-<sup>
-    - Superscript element
-    - Needs closing tag
-
-<sub> 
-    - Subscript element
-    - Needs closing tag
-
-<main> 
-    - Essentially a <div> but semantically correct for "main" content of page
-
-<header>
-    - Essentially a <div> but semantically correct for "header" portion of page
-
-HTML Entities
-    - Special codes/sequences that result in different characters
-    - e.g. copyright, diamonds, etc.
-    - Start with "&"
-    - End with ";"
-    - e.g. &lt; => "<"
-    - Each entity has a name and number
-
-Semantic Markup
-    Semantic - relating to meaning
-    - Add meaning to Markup
-    - Using elements like <main>, <header>, <footer>, etc...
-
-HTML Tables
-    - Tables are structured sets of data, made up of rows and columns. 
-      They can be a great way of displaying data clearly.
-    - In the early days of web, tables were commonly used to create page layouts.
-      Today, you should only use the table element when you are creating an actually
-      data table.
-    - To create a table, you'll use 5-10 different elements. It can be tricky
-      to remember them all.
-
-    <table> : holds tabular data
-    <td>    : table data (a single cell)
-    <tr>    : table row 
-    <th>    : column header
-    <thead> : wrap headers in this tag for semantics
-    <tfoot> : wrap footer in this tag for semantics
-    <tbody> : wrap body rows in this tag for semantics.
-
-Creating Forms
-    - The <form> element itself is a shell or container that deosn't have any visual impact.
-    - We then fill the form with a collection of inputs, checkboxes, buttons, etc.
-    - The form element represents a document selection containing interactive controls
-      for submitting information.
-    - The action attribute specifies WHERE the form data should be sent
-    - The method attribute specifies which HTTP method should be used
-
-<input>
-    - The input (Form input) element
-    - use placeholder="" to clarify input type to user
-    - tons of different input types
-    - Can have <input type="submit"> to replicate button. Don't do this.
-    - radio buttons are linked by their NAME
-        - need value="" to send data with radio buttons
-<label>
-    - Should be linked to an input 
-    - makes input more accessible 
-    - <input> needs id="cheese"...
-    - <label for="cheese"...
-
-<button>
-    - Default action is to do form action
-    - Button has a type that can be used to change button action
-    - button with type=button won't submit, even when in a form 
-
-name attribute
-    - name that is used to send data to server
-    - i.e. <label name=id>...</label>
-        yields ......com/tacos?id=what-the-user-input
-    - needs to be used in every single label
-    - used by server for data processing
-
-<select>
-    - used to group <options> in a dropdown list
-
-<textarea>
-    - used for multiline input
-
-Form Validations
-    - required attribute makes input required
-
-CSS
----
-    - What is it?   
-        - CSS is a language for describing how documents are presented visually,
-          how they are arranged, and how they are styled
-        - CSS stands for Cascading Style Sheets
-        
-CSS Selectors
--------------
-
-universal selector:
-* {  
-    color: pink;
-}
-
-element selector:
-button {
-    color: red;
-}
-
-selector list:
-h1, h2 {
-    color: blue;
-}
-
-id selector:
-#some-unique-id{
-    color: yellow;
-}
-
-class selector:
-.some-class-name {
-    color: magenta;
-}
-
-descendant selector:
-// can be a removed descendant by several levels of tags... 
-li a {  // will only style anchor tags, IF THEY ARE NESTED INSIDE <li>
-    color: teal;
-}
-
-.class-name a { // anchor tags nested inside class "post"
-    color: black;
-}
-
-adjacent selector:
-a + b {
-    // selects all b's directly after a's
-}
-
-direct-descendant selector(combinator):
-// selects all li that are DIRECT CHILDREN of <div>
-div > li {
-    color: white;
-}
-
-attribute selector:
-// select all input elements where the type attribute is set to "text"
-input[type="text"] {
-    width: 300px;
-    color: yellow;
-}
-
-pseudo classes:
-// keyword added to a selector that specifies a special state of the 
-// selected element(s)
-    - : active
-    - : checked
-    - : first
-    - : first-child
-    - : hover
-    - : not()
-    - : nth-child()
-    - : nth-of-type()
-
-.post button:hover {
-    // when hovering over a button that is in tag with 'post' class
-}
-.post:nth-of-type(3n){
-    // selects every third "post" for all post siblings
-    color: blue;
-}
-.post:nth-of-type(3){
-    // selects third "post" for all post siblings
-    color: blue;
-}
-
-pseudo elements:
-// keywords added to a selector that lets you style a particular part of
-// selected elements(s)
-    - ::after
-    - ::before
-    - ::first-letter
-    - ::first-line
-    - :: selection
-
-    p::first-letter {
-        // selects first letter of every paragraph
-        color: black;
-    }
-    p::selection {
-        // when selecting text in a paragraph...
-        background-color: yellow;
-    }
-
-css cascade:
-// the order your styles are declared in and linked to matters!
-// reads top-down!
-// this also stands for the html file where the <link> is....
-// the first <link> to a css file can be overwritten by content
-// in the second <link>
-
-specificity:
-// specificity is how the browser decides which rules apply when multiple rules
-// could apply to the same element. 
-// it is a measure of how specific a given selector is. The more specific
-// selector wins.
-
-    specificity guide
-    id > class > element
-
-css inheritance:
-// can set property to inherit, 
-button {
-    color: inherit;
-}
-=======
 Objectives
 - Understand how the internet works (high level)
 - Understand diff b/t front-end and back-end
@@ -653,4 +368,103 @@ transition
 transform
 ---------
     
->>>>>>> 4b1965598e32fbbaa58098d31cf6e64bfaa1dd99
+
+background:
+    - the <bg-size> value may only be included immediatly after <position>, 
+      seperated with the '/' character, like this: "center/80%", or "center/cover". 
+
+
+Flexbox
+-------
+    What is it?
+        Flexbox is a one-dimensional layout method for laying out items 
+        in rows or columns.
+    It's New(ish)
+        Flexbox is a recent addition to CSS, included to address common
+        layout frustrations.
+    Why 'Flex'?
+        Flexbox allows us to distribute space dunamically across elements
+        of an unknown size, hence the term "flex".
+
+    The Flex model
+        - 2 axes per "box" (entity with display: flex)
+        - Main axis (x)
+        - Cross axis (y)
+
+    flex-direction: 
+        - changes the main axis
+        - default == row
+        - row-reverse changes from L-R to R-L
+        - column is top to bottom
+        - column-reverse is bottom to top
+
+    justify-content:
+        - how content is distributed across the main axis
+        - SUPER IMPORTANT AND VALUABLE, ALL USING THE MAIN AXIS
+        - default == flex-start;
+        - space-between (main axis)
+        - space-around  (main axis)
+        - space-evenly  (main axis)
+        - center        (main axis)
+        - flex-start    (main axis)
+        - flex-end      (main axis)
+
+    flex-wrap:
+        - determines if contents are going to wrap along new line, or column
+        - flex-wrap: wrap
+        - wrap axis goes along cross-axis
+
+    align-items:
+        - how to distribute space / align across the cross-axis
+        - flex-start
+        - flex-end
+        - center
+        - baseline (uses baseline of text to align elements)
+
+    align-content:
+        - use to control / distribute space across the cross axis 
+        - only does something when using wrap, or wrap-reverse
+
+    align-self:
+        - assign to individual elements within a flex container
+        - default == flex-end
+
+Flex Sizing Properties
+----------------------
+    Flex-Basis
+        Defines the initial size of an element before additional space is 
+        distributed.
+        - along the main axis
+        - e.g. flex-basis: 200px 
+    Flex-Grow
+        Controls the amount of available space an element should take up. 
+        Accepts a unit-less number value.
+        - flex-grow: 2  // will grow 2x faster than other elements
+    Flex-Shrink
+        If items are larger than the container, they shrink according to
+        flex-shrink.
+        - flex-shrink: 2 // will shrink 2x faster than other eleements
+    
+    Flex shorthand
+        - flex-grow | flex-shrink | flex-basis
+        - flex-grow | flex-shrink
+        - flex-grow
+
+Responsive Design
+-----------------
+    The Problem
+        As mobile devices and tablets became widely available, developers
+        had a problem... how do we create websites that look good on all 
+        screen sizes.
+    One Approach
+        Early on, it was common to create seperate stylesheets for different
+        devices, or even completely different websites for each size.
+    Enter Responsivee
+        These day, we typically create ONE website and stylesheet that is able to
+        respond to different device sizes and features.
+
+    Media Queries
+        Media queries allow us to modify our styles depending on particular parameters
+        like screen width or device type.
+
+        
